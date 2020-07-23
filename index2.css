@@ -1,0 +1,69 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    text-align: center;
+
+}
+.login-form{
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px 30px;
+    transition: 0.5s;
+}
+.login-form{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+h2{
+    margin: 0 0 20px;
+    color:#fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: 
+      linear-gradient(rgba(0, 34, 76, 0.9), rgba(0,34,76, 0.9)),
+      url(corona.jpg);
+      background-size: cover;
+      background-position: center;
+}
+.login-form input{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background: rgba(255,255,255,0.1);
+}
+.login-form input::placeholder{
+    color: #fff;
+}
+.login-form input[type="submit"]{
+    color: #fff;
+    background: #006eff;
+    font-size: 16px;
+    border: none;
+    cursor:pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.login-form input[type="submit"]:hover{
+    background: #005aca;
+}
+a:visited{
+    color:rgb(255, 0, 0);
+}
+a:link{
+    color: gray;
+}

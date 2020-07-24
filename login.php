@@ -20,14 +20,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Bitte username.";
     } else{
         $username = trim($_POST["username"]);
     }
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "bitte passwort.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -67,15 +67,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: welcome.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
+                            $password_err = "Falsche Passwort.";
                         }
                     }
                 } else{
                     // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
+                    $username_err = "username existiert nicht.";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Versuchen Sie noch ein mal.";
             }
 
             // Close statement
@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          <h2>Login</h2>
         <p>bitte ausffülen um sich einzulogen</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group id="userror" <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
                 <input type="text" name="username"  placeholder="Benutzer" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>

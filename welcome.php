@@ -30,7 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="logout.php" class="btn btn-primary">Abmeldung</a>
     </p>
     <?php 
-     $url='http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-23&sortBy=publishedAt&apiKey=6e7dddf6894e48c282b961b4f219876e';
+     $url='http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-24&sortBy=publishedAt&apiKey=6e7dddf6894e48c282b961b4f219876e';
      $response= file_get_contents($url);
      $newsData=  json_decode($response);
     ?>

@@ -62,8 +62,15 @@ section{
     background: #005aca;
 }
 a:visited{
-    color:rgb(255, 0, 0);
+    color: violet;
 }
 a:link{
     color: gray;
+}
+
+#userror{
+    color: red;
+}
+.help-block{
+    color: red;
 }
